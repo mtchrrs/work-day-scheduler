@@ -1,18 +1,20 @@
 
 function createTimeBlock(time, content = ""){
-    
     const timeValue = moment(time, "H").format("h A");
     const timeRow = $('<div class="row row-cols-3 time-row">'); 
     const colTime = $('<div class="col border d-flex align-items-center justify-content-center time-col-time">').text(timeValue);
     const colTextArea = $('<textarea class="form-control col-8 time-col-textarea" type="text">').val(content);
     const colButton = $('<button type="button" class="col border d-flex align-items-center justify-content-center time-col-button">').text("Save");
-   
-
+        
     const currentTime = moment();
     const timeMoment = moment(time, "H");
     const presentTime = (currentTime > timeMoment) && (currentTime < timeMoment.clone().add(1, "h"))
     const pastTime = timeMoment < currentTime;
     const futureTime = timeMoment > currentTime;
+
+    // renderLastDetails();
+    // console.log(renderLastDetails);
+
 
     if(presentTime){
       colTextArea.addClass("present");
@@ -24,6 +26,10 @@ function createTimeBlock(time, content = ""){
       colTextArea.addClass("future");
     }
     
+   // inputs = localStorage.getItem(colTime.text(), colTextArea.val());
+
+    //if(colTime.text() === inputs.coltime.text()) 
+
     function handleFormSubmit(event){
         event.preventDefault(); 
         localStorage.setItem(colTime.text(), colTextArea.val());
@@ -31,20 +37,19 @@ function createTimeBlock(time, content = ""){
 
     colButton.on("click", handleFormSubmit);
     
-    function renderLastDetails(){
-        inputs = localStorage.getItem(colTime.text(), colTextArea.val());
+    // function renderLastDetails(){
+    //     inputs = localStorage.getItem(colTime.val(), colTextArea.val());
 
-        if (colTime.text() == inputs.colTime.text()){
-          colTextArea.val(inputs.colTextArea.val());
-        } else if (colTime.text() == null){
-            return;
-        };
+    //     if(timeValue == inputs.key) {
+    //         content == inputs[colTextArea.val()]
+    //     };
 
-    };
-    renderLastDetails();
+    // };
+   
 
  return timeRow.append(colTime, colTextArea, colButton);
 }
+
 
 
 // function handleFormSubmit(event){
@@ -67,22 +72,17 @@ function createTimeBlock(time, content = ""){
 $(function(){
    const currentTime = $('#currentDay');
    const container = $('.container');
-
     function startTimer(){
         setInterval(function(){
             currentTime.text(moment().format('dddd Do MMM YYYY h:mm:ss A'))
         }, 1000);
     }
-  
     startTimer();
-
-  
   for (let index = 9; index <18; index++) {
       const previousNotes = "";
       const timeBlock = createTimeBlock(index, previousNotes);
       container.append(timeBlock);
     }
-
 });
 
 // need to change the time to 12 hour
