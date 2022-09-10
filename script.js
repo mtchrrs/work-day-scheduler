@@ -31,17 +31,17 @@ function createTimeBlock(time, content = ""){
 
     colButton.on("click", handleFormSubmit);
     
-    // function renderLastDetails(){
-    //     inputs = localStorage.getItem(colTime.text(), colTextArea.val());
+    function renderLastDetails(){
+        inputs = localStorage.getItem(colTime.text(), colTextArea.val());
 
-    //     if (colTime.text() == inputs.colTime.text()){
-    //       colTextArea.val(inputs.colTextArea.val());
-    //     } else if (colTime.text() == null){
-    //         return;
-    //     };
+        if (colTime.text() == inputs.colTime.text()){
+          colTextArea.val(inputs.colTextArea.val());
+        } else if (colTime.text() == null){
+            return;
+        };
 
-    // };
-    //renderLastDetails();
+    };
+    renderLastDetails();
 
  return timeRow.append(colTime, colTextArea, colButton);
 }
@@ -70,7 +70,7 @@ $(function(){
 
     function startTimer(){
         setInterval(function(){
-            currentTime.text(moment().format('dddd Do MMM YYYY HH:mm:ss'))
+            currentTime.text(moment().format('dddd Do MMM YYYY h:mm:ss A'))
         }, 1000);
     }
   
