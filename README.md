@@ -42,7 +42,7 @@ THEN the saved events persist
 
 ## Using the Application
 
-Deployed Application URL:
+Deployed Application URL: https://mtchrrs.github.io/work-day-scheduler/
 
 The purpose of this application is to manage your day, to plan out events and structure to allow for maximum efficiency.
 
