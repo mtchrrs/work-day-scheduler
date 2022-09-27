@@ -48,7 +48,7 @@ The purpose of this application is to manage your day, to plan out events and st
 
 When first opening the application, users will be presented with the following screen
 
-![image](https://user-images.githubusercontent.com/110107834/190159293-0f77af3c-e6be-4826-9758-def5587aca3f.png)
+![image](https://user-images.githubusercontent.com/110107834/192441911-42e220a1-a02a-409e-9669-380295d4bdc4.png)
 
 Users are presented with the current day, date and time at the top of the page.
 
