@@ -6,7 +6,7 @@ function createTimeBlock(time, content = ""){
     // this variable creates the container (using jquery) that will hold the content
     const timeRow = $('<div class="row row-cols-3 time-row">'); 
     // this variable creates the column that will display the time (includes jquery classes)
-    const colTime = $('<div class="col border d-flex align-items-center justify-content-center time-col-time">').text(timeValue);// holds the timeValue
+    const colTime = $('<div class="col border d-flex align-items-center justify-content-center time-col-time">').text(timeValue + ":00");// holds the timeValue
     // this variable creates the column that users can input into, and displays this content
     const colTextArea = $('<textarea id="input" class="form-control col-8 time-col-textarea" type="text">').val(content);
     // this variable creates the save button
