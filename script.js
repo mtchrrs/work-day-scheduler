@@ -2,7 +2,7 @@
 function createTimeBlock(time, content = ""){
     // this variable takes the time parameter from the top and redefines  it
     // the value is converted through the moment library
-    const timeValue = moment(time, "H").format("h A"); // formats the time as "9(h) AM(A)""
+    const timeValue = moment(time, "HH").format("HH"); // formats the time as "13"
     // this variable creates the container (using jquery) that will hold the content
     const timeRow = $('<div class="row row-cols-3 time-row">'); 
     // this variable creates the column that will display the time (includes jquery classes)
@@ -58,8 +58,8 @@ $(function(){
     function startTimer(){
         // the timer must have an interval to show
         setInterval(function(){
-          // this function shows the time using the moment.js library in the form - Monday 1st Jan 2000 1:01:01 AM
-          currentTime.text(moment().format('dddd Do MMM YYYY h:mm:ss A'))
+          // this function shows the time using the moment.js library in the form - Monday 1st Jan 2000 01:01:01
+          currentTime.text(moment().format('dddd Do MMM YYYY HH:mm:ss'))
           // and refreshes the page every second
         }, 1000);
     };
@@ -67,14 +67,14 @@ $(function(){
     startTimer();
     // the for loop sets the number of time slots to create on the page
     for (let index = 9; index <18; index++) {
-       // the constant previous notes and index determine the parameters content and time in the createTimeBlock function
-       const previousNotes = "";
-       // therefore, each time slot is originally set with a number from 9 - 17, and empty content
-       const timeBlock = createTimeBlock(index, previousNotes);
-       // the new constant is then appended to the container created above (adding it to the time slots in the planner)
-       // this will also run the function
-       container.append(timeBlock);
-       // the time units are changed from 24 hour time to 12 hour time in line 5 (format)
+     // the constant previous notes and index determine the parameters content and time in the createTimeBlock function
+     const previousNotes = "";
+     // therefore, each time slot is originally set with a number from 9 - 17, and empty content
+      const timeBlock = createTimeBlock(index, previousNotes);
+     // the new constant is then appended to the container created above (adding it to the time slots in the planner)
+     // this will also run the function
+     container.append(timeBlock);
+      
     }
 });
 
