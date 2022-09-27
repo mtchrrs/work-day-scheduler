@@ -52,7 +52,7 @@ When first opening the application, users will be presented with the following s
 
 Users are presented with the current day, date and time at the top of the page.
 
-![image](https://user-images.githubusercontent.com/110107834/190159379-57992cb8-3eee-41c7-b0e6-706e1e908fdc.png)
+![image](https://user-images.githubusercontent.com/110107834/192442142-0d55e47a-86cd-402c-bcee-affc9894df9d.png)
 
 To input data, first find the desired time-slot, and then click in the middle column and type what you would like to see appear in this section.
 
@@ -65,7 +65,7 @@ Remember to save this input! If you do not save it, it will not be kept in the b
 During the work day, the scheduler will track the hours remaining through visual effects, meaning that past, present and current time slots will each differ in colour.
 As you can see in the following image, the colour of the time-slot is light grey, this represents past time, as I am completing this read me after 5pm.
 
-![image](https://user-images.githubusercontent.com/110107834/190159675-ec8c2eb7-ea19-4f47-abd6-bbc17a12d886.png)
+![image](https://user-images.githubusercontent.com/110107834/192442328-f8130164-e9f3-46f7-8cf5-94eed835ba77.png)
 
 Current time will be shown as red, and future time as green, however you will have to try the application for yourself to see these effects!
 If you reload the screen, your items will be saved, thus allowing for you to continue your work day and revisit in an hour or so to check the planner!
